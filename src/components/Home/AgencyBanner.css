@@ -1,0 +1,74 @@
+/* AgencyBanner.css */
+
+.agency-premium-wrapper {
+    position: relative;
+    padding: 120px 0;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.agency-mesh {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(at 0% 100%, rgba(33, 150, 243, 0.03) 0, transparent 50%), 
+      radial-gradient(at 100% 0%, rgba(255, 193, 7, 0.03) 0, transparent 50%);
+    z-index: 1;
+}
+
+/* Typography Overrides to match theme */
+.agency-premium-wrapper .banner-title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    margin-bottom: 20px;
+}
+
+.agency-premium-wrapper .banner-desc {
+    margin-bottom: 35px;
+    font-size: 1.1rem;
+    color: #64748b;
+}
+
+/* Specific Card Styling for this section */
+.agency-premium-wrapper .stats-premium-card {
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.3s ease;
+}
+
+.agency-premium-wrapper .stats-premium-card:hover {
+    background: #fff !important;
+    border-color: #066ac9 !important;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Responsive Handling */
+@media (max-width: 991px) {
+    .agency-premium-wrapper {
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .agency-premium-wrapper .banner-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .agency-premium-wrapper .btn-search-premium {
+        margin: 0 auto;
+    }
+
+    .agency-premium-wrapper .stats-premium-card {
+        text-align: left;
+    }
+
+    .agency-premium-wrapper .video-wrapper-premium {
+        transform: none !important;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .agency-premium-wrapper .banner-title {
+        font-size: 2.2rem;
+    }
+}

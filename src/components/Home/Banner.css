@@ -1,0 +1,224 @@
+/* Banner.css */
+
+.banner-premium-wrapper {
+  position: relative;
+  padding: 100px 0;
+  background-color: #f0f4f8;
+  overflow: hidden;
+}
+
+/* Background Mesh & Blobs */
+.banner-mesh {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(33, 150, 243, 0.05) 0, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(255, 193, 7, 0.05) 0, transparent 50%);
+  z-index: 1;
+}
+
+.floating-element {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 1;
+}
+
+/* Typography */
+.banner-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 8px 20px;
+  border-radius: 100px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.badge-dot-live {
+  width: 10px;
+  height: 10px;
+  background: #0cbc87;
+  border-radius: 50%;
+  position: relative;
+}
+
+.badge-dot-live::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid #0cbc87;
+  animation: badgePulse 1.5s infinite;
+}
+
+@keyframes badgePulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.banner-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  color: #1a202c;
+  margin-bottom: 30px;
+}
+
+.banner-title span {
+  color: #066ac9;
+}
+
+.banner-desc {
+  font-size: 1.15rem;
+  color: #4a5568;
+  max-width: 550px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Search Bar Premium */
+.search-container-premium {
+  position: relative;
+  max-width: 500px;
+  z-index: 10;
+}
+
+.search-glass {
+  background: white;
+  border-radius: 20px;
+  padding: 8px;
+  display: flex;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.search-glass:focus-within {
+  box-shadow: 0 25px 50px rgba(6, 106, 201, 0.15);
+  transform: translateY(-2px);
+  border-color: rgba(6, 106, 201, 0.2);
+}
+
+.search-input-premium {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding-left: 20px;
+  font-size: 1rem;
+}
+
+.btn-search-premium {
+  background: #066ac9;
+  color: white;
+  border-radius: 15px !important;
+  padding: 12px 25px !important;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-search-premium:hover {
+  background: #0555a1;
+  transform: scale(1.02);
+}
+
+/* Video Section */
+.video-wrapper-premium {
+  position: relative;
+  padding: 15px;
+  background: white;
+  border-radius: 40px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+  transform: perspective(1000px) rotateY(-5deg);
+  transition: all 0.5s ease;
+}
+
+.video-wrapper-premium:hover {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+.video-container {
+  aspect-ratio: 16/9;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Stats Styling */
+.stats-premium-card {
+  background: white;
+  padding: 30px;
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.stats-premium-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+.stat-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 991px) {
+  .banner-premium-wrapper {
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .banner-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .search-container-premium {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .video-wrapper-premium {
+    transform: none;
+    margin-top: 50px;
+  }
+
+  .banner-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner-title {
+    font-size: 2rem;
+  }
+
+  .search-glass {
+    padding: 5px;
+  }
+
+  .btn-search-premium {
+    padding: 10px 15px !important;
+  }
+}
