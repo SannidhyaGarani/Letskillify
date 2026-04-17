@@ -6,7 +6,7 @@
   "framework": "vite",
   "rewrites": [
     { "source": "/sitemap.xml", "destination": "/api/sitemap-xml" },
-    { "source": "/sitemap.txt", "destination": "/api/sitemap-txt" },
+    { "source": "/sitemap.txt", "destination": "/api/sitemap.txt" },
     { "source": "/assets/(.*)", "destination": "/public/assets/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
@@ -28,10 +28,10 @@
   ],
   "functions": {
     "api/sitemap-xml.js": {
-      "runtime": "@vercel/node"
+      "runtime": "nodejs@20.x"
     },
-    "api/sitemap-txt.js": {
-      "runtime": "@vercel/node"
+    "api/sitemap.txt.js": {
+      "runtime": "nodejs@20.x"
     }
   }
 }
