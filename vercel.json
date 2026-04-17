@@ -1,9 +1,7 @@
-{
+ {
+  "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "installCommand": "npm install",
-  "devCommand": "npm run dev",
-  "framework": "vite",
   "rewrites": [
     { "source": "/sitemap.xml", "destination": "/api/sitemap-xml" },
     { "source": "/sitemap.txt", "destination": "/api/sitemap.txt" },
@@ -28,10 +26,10 @@
   ],
   "functions": {
     "api/sitemap-xml.js": {
-      "runtime": "nodejs@20.x"
+      "runtime": "nodejs20.x"
     },
     "api/sitemap.txt.js": {
-      "runtime": "nodejs@20.x"
+      "runtime": "nodejs20.x"
     }
   }
 }
