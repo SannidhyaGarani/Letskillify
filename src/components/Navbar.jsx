@@ -670,6 +670,12 @@ function Navbar() {
                 </ul>
               </li>
 
+              <li className="nav-item">
+                <Link className="nav-link" to="/projects">
+                  Projects
+                </Link>
+              </li>
+
               {/* Small Screen  About Us */}
               <li
                 className="nav-item dropdown d-lg-none d-md-block"

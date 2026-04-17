@@ -2,7 +2,7 @@
 
 .our-works-premium {
     position: relative;
-    padding: 100px 0;
+    padding: 0px 0;
     background: #ffffff;
     overflow: hidden;
 }
@@ -186,7 +186,7 @@
 .next-arrow { right: -30px; }
 
 @media (max-width: 768px) {
-    .our-works-premium { padding: 60px 0; }
+    .our-works-premium { padding: 0px 0; }
     .prev-arrow, .next-arrow { display: none !important; }
     .work-image-container { height: 280px; }
 }

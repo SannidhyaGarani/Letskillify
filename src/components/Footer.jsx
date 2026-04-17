@@ -57,6 +57,7 @@ function Footer() {
                     { to: "/contact", text: "Contact Us" },
                     { to: "/courses", text: "Courses" },
                     { to: "/blogs", text: "Blogs" },
+                    { to: "/projects", text: "Projects" },
                     { to: "/products", text: "Products" },
                     { to: "/templates", text: "Templates" },
                   ].map((link, idx) => (

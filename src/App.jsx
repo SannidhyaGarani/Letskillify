@@ -39,6 +39,7 @@ const Certificate = lazy(() => import("./components/About/Certificate.jsx"));
 const Founder = lazy(() => import("./components/About/Founder.jsx"));
 const Offering = lazy(() => import("./components/About/Offering.jsx"));
 const TeamMember = lazy(() => import("./components/About/TeamMember.jsx"));
+const ProjectPage = lazy(() => import("./components/Projects/ProjectPage.jsx"));
 const AdminDashboard = lazy(() => import("./components/Admin/Admin.jsx"));
 const ForgetPassword = lazy(() => import("./components/Auth/ForgetPassword.jsx"));
 const CourseAdmin = lazy(() => import("./components/Admin/CourseAdmin.jsx"));
@@ -131,6 +132,7 @@ function App() {
                 <Route path="/teammember" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><TeamMember /></Suspense>} />
                 <Route path="/offering" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Offering /></Suspense>} />
                 <Route path="/certificate" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Certificate /></Suspense>} />
+                <Route path="/projects" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><ProjectPage /></Suspense>} />
                 <Route path="/privacypolicy" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Privacy /></Suspense>} />
                 <Route path="/disclaimer" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Disclaimer /></Suspense>} />
                 <Route path="/term&Condition" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><TermCondition /></Suspense>} />

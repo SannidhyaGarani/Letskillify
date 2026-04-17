@@ -156,30 +156,54 @@
 
 /* Stats Styling */
 .stats-premium-card {
-  background: white;
-  padding: 30px;
-  border-radius: 25px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02);
-  transition: all 0.3s ease;
+  padding: 24px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
+  height: 100%;
 }
 
 .stats-premium-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
 }
+
+/* Card Variations based on theme */
+.stat-card-yellow { background-color: #fffbeb; }
+.stat-card-blue { background-color: #f0f9ff; }
+.stat-card-purple { background-color: #f5f3ff; }
+.stat-card-teal { background-color: #f0fdfa; }
 
 .stat-icon-wrapper {
   width: 60px;
   height: 60px;
-  border-radius: 18px;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.stat-icon-yellow { color: #f59e0b; }
+.stat-icon-blue { color: #0369a1; }
+.stat-icon-purple { color: #8b5cf6; }
+.stat-icon-teal { color: #0d9488; }
+
+.stat-content h4 {
   font-size: 1.5rem;
+  color: #0f172a;
+  margin-bottom: 2px !important;
+}
+
+.stat-content p {
+  color: #475569;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0 !important;
 }
 
 /* Mobile Optimizations */
@@ -209,6 +233,33 @@
   }
 }
 
+@media (max-width: 768px) {
+  .stats-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .stats-premium-card {
+    padding: 20px 15px;
+    gap: 12px;
+  }
+
+  .stat-icon-wrapper {
+    width: 45px;
+    height: 45px;
+    font-size: 1.4rem;
+  }
+
+  .stat-content h4 {
+    font-size: 1.2rem;
+  }
+
+  .stat-content p {
+    font-size: 0.8rem;
+  }
+}
+
 @media (max-width: 576px) {
   .banner-title {
     font-size: 2rem;
@@ -220,5 +271,10 @@
 
   .btn-search-premium {
     padding: 10px 15px !important;
+  }
+
+  .stats-grid-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 }

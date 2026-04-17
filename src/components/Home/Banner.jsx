@@ -201,59 +201,59 @@ export default function Banner() {
       {/* Stats Section */}
       <section className="py-5 bg-white">
         <div className="container">
-          <div className="row g-4">
+          <div className="row g-4 stats-grid-container">
             <div className="col-md-6 col-lg-3">
-              <div className="stats-premium-card">
-                <div className="stat-icon-wrapper bg-warning bg-opacity-10 text-warning">
-                  <i className="fas fa-tv fs-4"></i>
+              <div className="stats-premium-card stat-card-yellow">
+                <div className="stat-icon-wrapper stat-icon-yellow">
+                  <i className="fas fa-tv"></i>
                 </div>
-                <div>
-                  <h4 className="mb-0 fw-bold">
+                <div className="stat-content">
+                  <h4 className="fw-bold">
                     <CountUp end={totalCourses} duration={2} />+
                   </h4>
-                  <p className="text-muted small mb-0">Premium Courses</p>
+                  <p>Online Courses</p>
                 </div>
               </div>
             </div>
 
             <div className="col-md-6 col-lg-3">
-              <div className="stats-premium-card">
-                <div className="stat-icon-wrapper bg-primary bg-opacity-10 text-primary">
-                  <i className="fas fa-user-tie fs-4"></i>
+              <div className="stats-premium-card stat-card-blue">
+                <div className="stat-icon-wrapper stat-icon-blue">
+                  <i className="fas fa-user-tie"></i>
                 </div>
-                <div>
-                  <h4 className="mb-0 fw-bold">
+                <div className="stat-content">
+                  <h4 className="fw-bold">
                     <CountUp end={11} duration={2} />+
                   </h4>
-                  <p className="text-muted small mb-0">Project Experts</p>
+                  <p>Expert Tutors</p>
                 </div>
               </div>
             </div>
 
             <div className="col-md-6 col-lg-3">
-              <div className="stats-premium-card">
-                <div className="stat-icon-wrapper bg-purple bg-opacity-10 text-purple" style={{ color: '#6f42c1' }}>
-                  <i className="fas fa-user-graduate fs-4"></i>
+              <div className="stats-premium-card stat-card-purple">
+                <div className="stat-icon-wrapper stat-icon-purple">
+                  <i className="fas fa-user-graduate"></i>
                 </div>
-                <div>
-                  <h4 className="mb-0 fw-bold">
+                <div className="stat-content">
+                  <h4 className="fw-bold">
                     <CountUp end={155} duration={2} />+
                   </h4>
-                  <p className="text-muted small mb-0">Global Learners</p>
+                  <p>Online Students</p>
                 </div>
               </div>
             </div>
 
             <div className="col-md-6 col-lg-3">
-              <div className="stats-premium-card">
-                <div className="stat-icon-wrapper bg-info bg-opacity-10 text-info">
-                  <i className="bi bi-patch-check-fill fs-4"></i>
+              <div className="stats-premium-card stat-card-teal">
+                <div className="stat-icon-wrapper stat-icon-teal">
+                  <i className="bi bi-patch-check-fill"></i>
                 </div>
-                <div>
-                  <h4 className="mb-0 fw-bold">
-                    <CountUp end={25} duration={2} />+
+                <div className="stat-content">
+                  <h4 className="fw-bold">
+                   <CountUp end={25} duration={2} />+
                   </h4>
-                  <p className="text-muted small mb-0">Awards Won</p>
+                  <p>Internship Members</p>
                 </div>
               </div>
             </div>
